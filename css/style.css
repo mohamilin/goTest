@@ -27,11 +27,16 @@
 
 /* untuk login page */
 .container-login {
-  margin-top: 3px;
+  margin-top: 50px;
 }
 
 .img-login {
   width: 80%;
   height: 80%;
   margin-top: 30px;
+}
+
+/* untuk register.html */
+.container-register {
+  width: 40%;
 }
