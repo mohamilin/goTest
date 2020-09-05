@@ -6,10 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
   <title>GoTest - Akurat, Aman dan Bahagia</title>
 
+
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link href="../../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="../../css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="stylesheet" href="/pages/hospital/style.css">
 </head>
 
 <body>
@@ -36,41 +38,53 @@
 
       <!-- Disi tampilanya -->
 
-      <div class="row">
+      <div class="row flex">
 
-        <div class="col">
+        <div class="col l3 s12 ">
           <div class="row">
             <div class="input-field col s12">
-              <i class="material-icons prefix">textsms</i>
-              <input type="text" id="autocomplete-input" class="autocomplete">
-              <label for="autocomplete-input">Autocomplete</label>
+              <input type="text" id="autocomplete-input" class="autocomplete" placeholder="Pilih Wilayah">
+              <!-- <i class="material-icons prefix">textsms</i> -->
+              <!-- <label for="autocomplete-input">Autocomplete</label> -->
             </div>
           </div>
         </div>
 
-        <div class="col">
+        <div class="col l3 s12 ">
           <form>
             <div class="input-field">
-              <input id="search" type="search" required>
-              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-              <i class="material-icons">close</i>
+              <input id="search" type="search" required placeholder="ex : RS. abcdx">
+              <!-- <label class="label-icon" for="search"><i class="material-icons">search</i></label> -->
+              <!-- <i class="material-icons">close</i> -->
             </div>
           </form>
         </div>
 
-        <div class="input-field col">
-          <select multiple>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
+        <div class="input-field col l3 s12 ">
+          <select multiple class="material-flex">
+            <option value="" disabled selected>Pilih Metode Test</option>
+            <option value="1">Rapid</option>
+            <option value="2">PCR / Swab</option>
           </select>
-          <label>Materialize Multiple Select</label>
+          <!-- <label>Materialize Multiple Select</label> -->
         </div>
 
+        <div class="col l3 s12 flex-center yellow">
+          <!-- <div class="button-sm pink "> -->
+            <a href="">
+              <button id="search-btn" type="submit">
+                <i class="material-icons">search</i>
+                cari
+                
+              </button>
+            </a>
+          <!-- </div> -->
+        </div>
 
-
-
+        
+        
+        
+        
       </div>
 
     </div>
@@ -118,10 +132,12 @@
   </footer>
 
   <!--  Scripts-->
-  <script src="/pages/hospital/script-hospital.js"></script>
+  
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="../../js/materialize.js"></script>
   <script src="../../js/init.js"></script>
+  <script src="/pages/hospital/script-hospital.js"></script>
+
 </body>
 
 </html>
