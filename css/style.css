@@ -24,3 +24,14 @@
 .img-act-3 {
   width: 40%;
 }
+
+/* untuk login page */
+.container-login {
+  margin-top: 3px;
+}
+
+.img-login {
+  width: 80%;
+  height: 80%;
+  margin-top: 30px;
+}
