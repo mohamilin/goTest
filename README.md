@@ -8,3 +8,5 @@ OUR TEAM :
 
 
 # DOCUMENTATION
+1. Membuat component element
+2. 
