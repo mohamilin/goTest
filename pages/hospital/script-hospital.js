@@ -26,3 +26,16 @@ document.addEventListener('DOMContentLoaded', function() {
       },
     });
   });
+
+  //colapsible host profile
+  $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+
+
+  //date picker
+  $(document).ready(function(){
+    $('.datepicker').datepicker();
+  });
+
+  

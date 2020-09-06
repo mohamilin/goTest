@@ -10,6 +10,8 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <link href="../../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
   <link href="../../css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <link rel="stylesheet" href="/pages/hospital/style.css">
+
 </head>
 
 <body>
@@ -41,15 +43,7 @@
 
         <!--    Diisi tampilanya  -->
 
-        <div class="input-field col s12">
-          <select multiple>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-          </select>
-          <label>Materialize Multiple Select</label>
-        </div>
+        
 
     </div>
   </div>
@@ -61,6 +55,106 @@
       <div class="row">
 
         <!-- Diisi tampilanya  -->
+        <div class="row">
+          <div class="col l3">
+            <div class="img-field-hostprofile"></div>
+          </div>
+          <div class="col l9 grey lighten-4">
+            <h4>RS. ABCDE</h4>
+            <span><i class="material-icons">location_on</i>Menara BCA, Lantai P 9, 1, Jl. M.H. Thamrin, Menteng, Kec. Menteng, DKI Jakarta</span>
+            <h5>Layanan test covid-19</h5>
+            <ul>
+              <li> &check; Rapid test</li>
+              <li> &check; PCR / Swab test</li>
+            </ul>
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="col l3"></div>
+          <div class="col l9 grey lighten-4">
+            
+            <ul class="collapsible">
+              <li class="active">
+                <div class="collapsible-header"><i class="material-icons">invert_colors</i>Rapid Test</div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    <span>Poliklinik</span>
+                    <span>lab test RS. ABCDE</span> <br>
+                    <h5>Rp 185.000,-</h5>
+                    <h5>Paket Termasuk</h5>
+                    <ul>
+                      <li> &check; Surat hasil pemeriksaan (hasil maks. 1 hari)</li>
+                      <li> &check; Konsultasi dokter umum</li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <label>Pilih tanggal pemeriksaan</label>
+                    <input type="text" class="datepicker">
+                  </div>
+                  <div class="row input-field">
+                    <select>
+                      <optgroup label="Pagi">
+                        <option value="1">08.00</option>
+                        <option value="2">10.00</option>
+                        <option value="2">12.00</option>
+                      </optgroup>
+                      <optgroup label="Siang">
+                        <option value="3">14.00</option>
+                        <option value="4">16.00</option>
+                      </optgroup>
+                    </select>
+                    <label>Pilih jam pemeriksaan</label>
+                  </div>
+                  <div class="row">
+                    <a class="waves-effect waves-light btn btn-lanjutkan-fold"><i class="material-icons right">arrow_forward</i>lanjutkan</a>
+                  </div>
+                  <!-- <div class="input-field col s12"> -->
+                  <!-- </div> -->
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header"><i class="material-icons">colorize</i>PCR / Swab test</div>
+                <div class="collapsible-body">
+                  <div class="row">
+                    <span>Poliklinik</span>
+                    <span>lab test RS. ABCDE</span> <br>
+                    <h5>Rp 1.585.000,-</h5>
+                    <h5>Paket Termasuk</h5>
+                    <ul>
+                      <li> &check; Surat hasil pemeriksaan (hasil maks. 7 hari)</li>
+                      <li> &check; Konsultasi dokter umum</li>
+                    </ul>
+                  </div>
+                  <div class="row">
+                    <label>Pilih tanggal pemeriksaan</label>
+                    <input type="text" class="datepicker">
+                  </div>
+                  <div class="row input-field">
+                    <select>
+                      <optgroup label="Pagi">
+                        <option value="1">08.00</option>
+                        <option value="2">10.00</option>
+                        <option value="2">12.00</option>
+                      </optgroup>
+                      <optgroup label="Siang">
+                        <option value="3">14.00</option>
+                        <option value="4">16.00</option>
+                      </optgroup>
+                    </select>
+                    <label>Pilih jam pemeriksaan</label>
+                  </div>
+                  <div class="row">
+                    <a class="waves-effect waves-light btn btn-lanjutkan-fold"><i class="material-icons right">arrow_forward</i>lanjutkan</a>
+                  </div>
+                  <!-- <div class="input-field col s12"> -->
+                  <!-- </div> -->
+                </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
 
       </div>
     </div>
@@ -144,6 +238,7 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="../../js/materialize.js"></script>
   <script src="../../js/init.js"></script>
+  <script src="/pages/hospital/script-hospital.js"></script>
   <script src="/pages/hospital/script-hospital.js"></script>
 
   <!-- script pop up login -->

@@ -82,3 +82,18 @@
     /* background-attachment: fixed; */
     background-position: center; 
 }
+
+/* hospital profile */
+
+.img-field-hostprofile{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSzQ3nRNv_mDeoXYNJfnQscRNlhclfEMb9XnA&usqp=CAU');
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+}
+
+.btn-lanjutkan-fold{
+    float: right;
+    width: 180px;
+    margin-bottom: 5px;
+}
