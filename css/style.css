@@ -40,3 +40,37 @@
 .container-register {
   width: 40%;
 }
+
+.reg-title {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.box-modal {
+  width: 30%;
+  max-height:100%;
+  overflow:hidden;
+}
+
+.modal{
+  max-height:100%;
+  overflow:hidden;
+ }
+ 
+ input[type="submit"]{
+   width: 100%;
+   margin-top: 50px;
+ }
+ .modal-close{
+   position: absolute;
+   top:10px;
+   right:10px;
+   padding:0;
+   margin:0;
+ }
+
+ .center-login {
+   text-align: center;
+   margin-bottom: 50px;
+ }
