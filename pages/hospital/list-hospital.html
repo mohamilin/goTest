@@ -160,12 +160,50 @@
     </div>
   </footer>
 
+
+
+  <!-- POP UP untuk halaman LOGIN -->
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal box-modal">
+    <div class="modal-content">
+        <!-- isi dari pop up -->
+        <div class="center-login">
+            <h3 class="blue-text">Let’s get started</h3>
+            <h6>Silahkan Masukkan Email dan Password Anda agar Kami dapat Memberikan Layanan Go Test.</h6>    
+        </div>
+        <form action="#">
+            <div class="input-field">
+                <i class="material-icons prefix">person</i>
+                <input type="email" id="email">
+                <label for="email">Email</label>
+            </div>
+            <div class="input-field">
+                <i class="material-icons prefix">lock</i>
+                <input type="password" id="pass">
+                <label for="pass">Password</label>
+            </div>
+            <input type="submit" value="Login" class="btn btn-large">
+            <p class="center">Belum Memiliki Akun ? <a href="../auth/register.html">DAFTAR</a></p>
+        </form>
+    </div>
+</div>
   <!--  Scripts-->
   
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="../../js/materialize.js"></script>
   <script src="../../js/init.js"></script>
   <script src="/pages/hospital/script-hospital.js"></script>
+
+  <!-- script pop up login -->
+  <script>
+    $(document).ready(function () {
+        $('.modal').modal({
+            // dismissible: true,
+            // preventScrolling: false
+        });
+    })
+</script>
 
 </body>
 
