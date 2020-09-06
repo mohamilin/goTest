@@ -41,50 +41,40 @@
       <br /><br />
 
       <!-- Disi tampilanya -->
+      <form action="">
 
-      <div class="row flex">
-
-        <div class="col l3 s12 ">
-          <div class="row">
-            <div class="input-field col s12">
-              <input type="text" id="autocomplete-input" class="autocomplete" placeholder="Pilih Wilayah">
-              <!-- <i class="material-icons prefix">textsms</i> -->
-              <!-- <label for="autocomplete-input">Autocomplete</label> -->
-            </div>
-          </div>
+        <div class="row">
+  
+          <div class="col s12">
+            <div class="row">
+              <div class="input-field col l3 s12">
+                <input type="text" id="autocomplete-input" class="autocomplete" placeholder="pilih lokasi ">
+                <!-- <i class="material-icons prefix">textsms</i> -->
+                <!-- <label for="autocomplete-input">Autocomplete</label> -->
+              </div>
+              <div class="input-field col l5 s12">
+                <input id="last_name" type="text" class="validate" placeholder="cari rumah sakit">
+                <!-- <label for="last_name">cari lokasi test</label> -->
+              </div>
+              <div class="input-field col l2 s12">
+                <select multiple>
+                  <option class = "grey" value="" disabled selected>method:</option>
+                  <option value="1">Rapid test</option>
+                  <option value="2">PCR / Swab test</option>
+                  
+                </select>
+                <!-- <label>Materialize Multiple Select</label> -->
+              </div>
+              <div class="input-field col l2 s12">
+                <div class="btn col l12 s12">
+                  <span>cari</span>
+                </div>
+              </div>
+            </div> 
+          </div>        
         </div>
+      </form>
 
-        <div class="col l3 s12 ">
-          <form>
-            <div class="input-field">
-              <input id="search" type="search" required placeholder="ex : RS. abcdx">
-              <!-- <label class="label-icon" for="search"><i class="material-icons">search</i></label> -->
-              <!-- <i class="material-icons">close</i> -->
-            </div>
-          </form>
-        </div>
-
-        <div class="input-field col l3 s12 ">
-          <select multiple class="material-flex">
-            <option value="" disabled selected>Pilih Metode Test</option>
-            <option value="1">Rapid</option>
-            <option value="2">PCR / Swab</option>
-          </select>
-          <!-- <label>Materialize Multiple Select</label> -->
-        </div>
-
-        <div class="col l3 s12 flex-center yellow">
-          <!-- <div class="button-sm pink "> -->
-            <a href="">
-              <button id="search-btn" type="submit">
-                <i class="material-icons">search</i>
-                cari
-                
-              </button>
-            </a>
-          <!-- </div> -->
-        </div>
-      </div>
 
       <div class="row">
         <h3> Pencarian Rumah Sakit Pelaksana</h3>
@@ -92,7 +82,7 @@
 
       <div class="row">
         <div class="container-list-host row">
-          <div class="col l3 s4 img-field">
+          <div class="col l3 s12 img-field">
           </div>
           <div class="col  l7">
             <h3>RS ABCDE</h3>
@@ -104,9 +94,9 @@
 
 
           </div>
-          <div class="col l2 price-field">
+          <div class="col l2 price-field s12 yellow">
             <div class="price">Rp 300.000,-</div>
-            <div class="btn-price"><a class="waves-effect waves-light btn-small btn-small-pilih light-blue lighten-1">PILIH</a></div>
+            <div class="btn-price s12"><a class="waves-effect waves-light btn-small btn-small-pilih light-blue lighten-1">PILIH</a></div>
           </div>
 
         </div>
