@@ -25,6 +25,10 @@
   width: 40%;
 }
 
+.orange-text {
+  font-size: 50px;
+}
+
 /* untuk login page */
 .container-login {
   margin-top: 50px;
