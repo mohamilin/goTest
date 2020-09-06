@@ -39,3 +39,46 @@
     /* font-size: 15px; */
 }
 
+
+/* list host components */
+
+.container-list-host{
+    border: grey solid 0.5px;
+    height: 20vw;
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+.price-field{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    height: 100%;
+}
+
+.btn-price{
+    /* align-self: flex-end; */
+    /* border: black 1px solid; */
+    /* height: 20px; */
+    margin-top: 70%;
+    
+}
+
+.btn-small-pilih{
+    float: right;
+    width: 125px;
+}
+
+.price{
+    margin-top: 80%;
+}
+
+.img-field{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSzQ3nRNv_mDeoXYNJfnQscRNlhclfEMb9XnA&usqp=CAU');
+    height: 100%;
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center; 
+}
