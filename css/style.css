@@ -83,3 +83,8 @@
    text-align: center;
    margin-bottom: 50px;
  }
+
+ /* untuk halaman news.html */
+ .card-api {
+   height: 320px;
+ }
