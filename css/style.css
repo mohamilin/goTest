@@ -36,6 +36,11 @@
   margin-top: 30px;
 }
 
+.nav-mob {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
 /* untuk register.html */
 .container-register {
   width: 40%;
