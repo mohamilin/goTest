@@ -55,6 +55,22 @@
                             <input id="password" type="password" class="validate" />
                             <label for="password">Password</label>
                         </div>
+                        <div class="input-field col s6">
+                            <input id="input_text" type="text" data-length="10">
+                            <label for="input_text">Nomor HP</label>
+                          </div>
+                        <div class="input-field col s6">
+                            <select>
+                                <!-- <option value="" disabled selected>Pilih Jenis Kelamin</option> -->
+                                <option value="1">Laki-Laki</option>
+                                <option value="2">Perempuan</option>
+                            </select>
+                            <label>Jenis Kelamin</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">Alamat</label>
+                        </div>
                         <div class="center">
                             <a class="waves-effect center waves-light btn-small blue lighten-2">Buat Akun</a>
                             <p>Sudah Memiliki Akun ? <a class="modal-trigger" href="#modal1"> LOGIN</a></p>
@@ -74,7 +90,7 @@
             <!-- isi dari pop up -->
             <div class="center-login">
                 <h3 class="blue-text">Let’s get started</h3>
-                <h6>Silahkan Masukkan Email dan Password Anda agar Kami dapat Memberikan Layanan Go Test.</h6>    
+                <h6>Silahkan Masukkan Email dan Password Anda agar Kami dapat Memberikan Layanan Go Test.</h6>
             </div>
             <form action="#">
                 <div class="input-field">
@@ -87,6 +103,7 @@
                     <input type="password" id="pass">
                     <label for="pass">Password</label>
                 </div>
+
                 <input type="submit" value="Login" class="btn btn-large">
             </form>
         </div>
@@ -105,6 +122,21 @@
                 // preventScrolling: false
             });
         })
+        //untk jenis kelamin
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, options);
+        });
+
+        // Or with jQuery
+
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+
+        // untuk textarea alamat
+        // $('#textarea1').val('New Text');
+        // M.textareaAutoResize($('#textarea1'));
     </script>
 </body>
 
