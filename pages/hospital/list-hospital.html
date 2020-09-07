@@ -48,9 +48,12 @@
           <div class="col s12">
             <div class="row">
               <div class="input-field col l3 s12">
-                <input type="text" id="autocomplete-input" class="autocomplete" placeholder="pilih lokasi ">
-                <!-- <i class="material-icons prefix">textsms</i> -->
-                <!-- <label for="autocomplete-input">Autocomplete</label> -->
+                <select>
+                  <option value="" disabled selected>Pilih lokasi</option>
+                  <option value="1">DKI Jakarta</option>
+                  <option value="2">Surabaya</option>
+                  <option value="3">Balikpapan</option>
+                </select>
               </div>
               <div class="input-field col l5 s12">
                 <input id="last_name" type="text" class="validate" placeholder="cari rumah sakit">
@@ -81,25 +84,39 @@
       </div>
 
       <div class="row">
-        <div class="container-list-host row">
-          <div class="col l3 s12 img-field">
+          <div class="container-list-host row">
+            <div class="row">
+              <div class="col l4 s3 img-field">
+              </div>
+              <div class="col  l8 s9">
+                <p id="hospitalName">RS ABCDE</p>
+                  <span id="hospitalAdress">Menara BCA, Lantai P 9, 1, Jl. M.H. Thamrin</span>  
+                </p>
+                <p id='hospitalCity'>DKI Jakarta</p>
+                <p><span id="test-method">&check; Rapid test </span><span class="price">(Rp 150.000,-)</p>
+                <p><span id="test-method">&check; PCR / Swab test </span><span class="price">(Rp 1.500.000,-)</p>
+                
+                  <button type="button" class="collapsible">pilih lokasi tes</button>
+                  <div class="content">
+                    <p>
+                      Biaya termasuk
+                      <ul>
+                        <li> &check; Surat hasil test</li>
+                        <li> &check; Konsultasi dokter umum</li>
+                      </ul>
+                      <a class="waves-effect waves-light btn"><i class="material-icons right">arrow_forward</i>lanjutkan</a>
+                    </p>
+                    
+              </div>
+              
+              </div>
+              
+            </div>
           </div>
-          <div class="col  l7">
-            <h3>RS ABCDE</h3>
-            <h6>Rapid Test, PCR</h6>
-            <p>
-              <i class="material-icons">place</i>
-              Menara BCA, Lantai P 9, 1, Jl. M.H. Thamrin, Menteng, Kec. Menteng, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 
-            </p>
+      
 
 
-          </div>
-          <div class="col l2 price-field s12">
-            <div class="price">Rp 300.000,-</div>
-            <div class="btn-price s12"><a class="waves-effect waves-light btn-small btn-small-pilih light-blue lighten-1">PILIH</a></div>
-          </div>
-
-        </div>
+        
       </div>
 
       <div class="row">
