@@ -21,7 +21,7 @@ const getDataRS = async () => {
                   </p>
                   <p id='hospitalCity'>${el.KotaRS}</p>
                   <p><span id="test-method">&check; Rapid test </span><span class="price">(Rp ${el.biayapcr})</p>
-                  <p><span id="test-method">&check; PCR / Swab test </span><span class="price">(${el.biayarapid})</p>
+                  <p><span id="test-method">&check; PCR / Swab test </span><span class="price">(Rp ${el.biayarapid})</p>
                   
                     <button type="button" class="collapsible">pilih lokasi tes</button>
                     <div class="content">
