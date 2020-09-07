@@ -84,7 +84,17 @@
    margin-bottom: 50px;
  }
 
+/* di mobile */
+@media(max-width: 1000px) {
+  .box-modal-mob {
+    width: 70%;
+  }
+}
+
  /* untuk halaman news.html */
  .card-api {
-   height: 320px;
+   height: 270px;
+ }
+ .img-act-card {
+   width: 50%;
  }
