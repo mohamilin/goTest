@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('select');
-    var instances = M.FormSelect.init(elems, options);
-  });
+// document.addEventListener('DOMContentLoaded', function() {
+//     var elems = document.querySelectorAll('select');
+//     var instances = M.FormSelect.init(elems, options);
+//   });
 
   // Or with jQuery
 
@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //autocomplete
 
-  document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.autocomplete');
-    var instances = M.Autocomplete.init(elems, options);
-  });
+  // document.addEventListener('DOMContentLoaded', function() {
+  //   var elems = document.querySelectorAll('.autocomplete');
+  //   var instances = M.Autocomplete.init(elems, options);
+  // });
   
   $(document).ready(function(){
     $('input.autocomplete').autocomplete({
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // collapsible
   var coll = document.getElementsByClassName("collapsible");
-var i;
+  var i;
 
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
@@ -55,9 +55,15 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-//tabs
-var instance = M.Tabs.init(el, options);
 
-$(document).ready(function(){
-  $('.tabs').tabs();
-});
+// const getDataGithub = async () => {
+//   try {
+//     let response = await fetch("https://5f55a45f39221c00167fb0c7.mockapi.io/covid19/RumahSakit");
+//     let data = await response.json();
+//     console.log("data rs", data);
+//   } catch {
+//     console.log("maaf server sedang maintenance");
+//   }
+// }
+
+// getDataGithub()

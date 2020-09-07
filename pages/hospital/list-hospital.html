@@ -83,40 +83,36 @@
         <h3> Pencarian Rumah Sakit Pelaksana</h3>
       </div>
 
-      <div class="row">
-          <div class="container-list-host row">
-            <div class="row">
-              <div class="col l4 s3 img-field">
+      <div class="hospital-container" id="list-container">
+        <!-- <div class="row">
+            <div class="container-list-host row" id='container-list-host'>
+              <div class="row">
+                <div class="col l4 s3 img-field">
+                </div>
+                <div class="col  l8 s9">
+                  <p id="hospitalName">RS ABCDE</p>
+                    <span id="hospitalAdress">Menara BCA, Lantai P 9, 1, Jl. M.H. Thamrin</span>  
+                  </p>
+                  <p id='hospitalCity'>DKI Jakarta</p>
+                  <p><span id="test-method">&check; Rapid test </span><span class="price">(Rp 150.000,-)</p>
+                  <p><span id="test-method">&check; PCR / Swab test </span><span class="price">(Rp 1.500.000,-)</p>
+                  
+                    <button type="button" class="collapsible">pilih lokasi tes</button>
+                    <div class="content">
+                      <p>
+                        Biaya termasuk
+                        <ul>
+                          <li> &check; Surat hasil test</li>
+                          <li> &check; Konsultasi dokter umum</li>
+                        </ul>
+                        <a class="waves-effect waves-light btn"><i class="material-icons right">arrow_forward</i>lanjutkan</a>
+                      </p>
+                </div>
+                </div>
               </div>
-              <div class="col  l8 s9">
-                <p id="hospitalName">RS ABCDE</p>
-                  <span id="hospitalAdress">Menara BCA, Lantai P 9, 1, Jl. M.H. Thamrin</span>  
-                </p>
-                <p id='hospitalCity'>DKI Jakarta</p>
-                <p><span id="test-method">&check; Rapid test </span><span class="price">(Rp 150.000,-)</p>
-                <p><span id="test-method">&check; PCR / Swab test </span><span class="price">(Rp 1.500.000,-)</p>
-                
-                  <button type="button" class="collapsible">pilih lokasi tes</button>
-                  <div class="content">
-                    <p>
-                      Biaya termasuk
-                      <ul>
-                        <li> &check; Surat hasil test</li>
-                        <li> &check; Konsultasi dokter umum</li>
-                      </ul>
-                      <a class="waves-effect waves-light btn"><i class="material-icons right">arrow_forward</i>lanjutkan</a>
-                    </p>
-                    
-              </div>
-              
-              </div>
-              
-            </div>
-          </div>
-      
+            </div> -->
+        </div>
 
-
-        
       </div>
 
       <div class="row">
@@ -211,6 +207,7 @@
   <script src="../../js/materialize.js"></script>
   <script src="../../js/init.js"></script>
   <script src="/pages/hospital/script-hospital.js"></script>
+  <script src="/pages/hospital/database.js"></script>
 
   <!-- script pop up login -->
   <script>
@@ -220,8 +217,10 @@
             // preventScrolling: false
         });
     })
-</script>
+  </script>
 
-</body>
+  
+  </body>
+  
 
 </html>
