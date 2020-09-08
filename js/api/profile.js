@@ -9,7 +9,7 @@ const showProfileUser = async () => {
 
 
     let result = await response.json();
-    console.log(result.firstName);
+    // console.log(result.firstName);
 
     let show1 = document.getElementById("last_name");
     show1.innerHTML = `: ${result.lastName}`;

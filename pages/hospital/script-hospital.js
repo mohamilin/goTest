@@ -121,3 +121,46 @@ for (i = 0; i < coll.length; i++) {
 // }
 
 // getDataGithub()
+
+
+
+
+const searchBar = async() => {
+ try {
+  let response = await fetch(
+    "https://5f55a45f39221c00167fb0c7.mockapi.io/covid19/RumahSakit"
+  );
+  let data = await response.json();
+
+  console.log("data rs", data);
+
+  // 
+
+// search BOX
+const search_input = document.querySelector("#search_input");
+search_input.addEventListener("keyup", function(e) {
+  const search_item = e.target.value.toLowerCase();
+  const span_item = document.querySelectorAll(".row #hospitalCity");
+
+  span_item.forEach(function(item, index){
+    if(item.kotaRS.toLowerCase().indexOf(search_item) != -1 ){
+      item.closest("div").style.display = "block";
+    }
+    else {
+      item.closest("div").style.display = "none";
+
+    }
+  })
+
+});
+
+  // 
+
+ } catch (error) {
+   console.log(error);
+ }
+
+}
+
+searchBar();
+
