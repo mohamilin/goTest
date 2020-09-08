@@ -40,7 +40,7 @@ const getDataRS = async () => {
                   <p id='hospitalCity'>${el.KotaRS}</p>
                   <div class="service">
                   </div>
-                  <a class="waves-effect waves-light btn btn-small-pilih toFormButton" href="#"><i class="material-icons right"  >arrow_forward</i>pilih lokasi tes</a>
+                  <a class="waves-effect waves-light btn btn-small-pilih toFormButton" href="/pages/booking/form-booking.html""><i class="material-icons right"  >arrow_forward</i>pilih lokasi tes</a>
                 </div>
                 </div>
               </div>
@@ -75,28 +75,36 @@ const getDataRS = async () => {
       console.log(formButton)
       formButton.addEventListener('click',function(){
         console.log(el)
+        localStorage.setItem('hospitalData',JSON.stringify(el.namaRumahSakit))
       })
+
 
 
     });
 
 
-    let cariRumahSakit = document.getElementById('cariRumahSakit').value
+    // let cariRumahSakit = document.getElementById('cariRumahSakit').value
 
     let searchButton = document.querySelector('#search-button')
+    searchButton.onclick = function (){
+      cariRS(data,listContainer)
+      
+    }
 
-    searchButton.addEventListener('click',function (){
-      let resultFilter = []
+    // searchButton.addEventListener('click',function (){
+    //   let resultFilter = []
 
-      console.log(cariRumahSakit)
-      for (let i=0; i<data.length; i++){
-        if(data[i].namaRumahSakit.includes(cariRumahSakit)){
-          resultFilter.push(data[i])
-        }
-      }
+    //   console.log(cariRumahSakit)
+    //   for (let i=0; i<data.length; i++){
+    //     if(data[i].namaRumahSakit.includes(cariRumahSakit)){
+    //       resultFilter.push(data[i])
+    //     }
+    //   }
   
-      console.log(resultFilter);
-    })
+    //   console.log(resultFilter);
+
+
+    
     
     // filtering hospital data
     
@@ -110,5 +118,24 @@ const getDataRS = async () => {
 
 getDataRS();
 
+function cariRS(data,listContainer){
+  let cariRumahSakit = document.getElementById('cariRumahSakit').value
 
+  
+
+  
+    let resultFilter = []
+
+    console.log(cariRumahSakit)
+    for (let i=0; i<data.length; i++){
+      if(data[i].namaRumahSakit.includes(cariRumahSakit)){
+        resultFilter.push(data[i])
+      }
+    }
+
+    console.log(resultFilter);
+
+    listContainer.clearChildren
+    console.log(listContainer)
+}
 
