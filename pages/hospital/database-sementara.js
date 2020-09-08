@@ -83,22 +83,28 @@ const getDataRS = async () => {
     });
 
 
-    let cariRumahSakit = document.getElementById('cariRumahSakit').value
+    // let cariRumahSakit = document.getElementById('cariRumahSakit').value
 
     let searchButton = document.querySelector('#search-button')
+    searchButton.onclick = function (){
+      cariRS(data,listContainer)
+      
+    }
 
-    searchButton.addEventListener('click',function (){
-      let resultFilter = []
+    // searchButton.addEventListener('click',function (){
+    //   let resultFilter = []
 
-      console.log(cariRumahSakit)
-      for (let i=0; i<data.length; i++){
-        if(data[i].namaRumahSakit.includes(cariRumahSakit)){
-          resultFilter.push(data[i])
-        }
-      }
+    //   console.log(cariRumahSakit)
+    //   for (let i=0; i<data.length; i++){
+    //     if(data[i].namaRumahSakit.includes(cariRumahSakit)){
+    //       resultFilter.push(data[i])
+    //     }
+    //   }
   
-      console.log(resultFilter);
-    })
+    //   console.log(resultFilter);
+
+
+    
     
     // filtering hospital data
     
@@ -112,5 +118,24 @@ const getDataRS = async () => {
 
 getDataRS();
 
+function cariRS(data,listContainer){
+  let cariRumahSakit = document.getElementById('cariRumahSakit').value
 
+  
+
+  
+    let resultFilter = []
+
+    console.log(cariRumahSakit)
+    for (let i=0; i<data.length; i++){
+      if(data[i].namaRumahSakit.includes(cariRumahSakit)){
+        resultFilter.push(data[i])
+      }
+    }
+
+    console.log(resultFilter);
+
+    listContainer.clearChildren
+    console.log(listContainer)
+}
 
