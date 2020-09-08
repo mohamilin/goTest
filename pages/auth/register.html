@@ -40,23 +40,23 @@
                     <form class="col s12">
                         <h2 class="reg-title">Daftar Akun Baru</h2>
                         <div class="input-field col s6">
-                            <input placeholder="Nama Depan" id="first_name" type="text" class="validate" />
+                            <input placeholder="Nama Depan" name="firstName" id="first_name" type="text" class="validate" />
                             <label for="first_name">Nama Depan</label>
                         </div>
                         <div class="input-field col s6">
-                            <input id="last_name" type="text" class="validate" />
+                            <input id="last_name" name="lastName"  type="text" class="validate" />
                             <label for="last_name">Nama Belakang</label>
                         </div>
                         <div class="input-field col s12">
-                            <input id="email" type="email" class="validate" />
+                            <input id="email" name="email" type="email" class="validate" />
                             <label for="email">Email</label>
                         </div>
                         <div class="input-field col s12">
-                            <input id="password" type="password" class="validate" />
+                            <input id="password" name="password" type="password" class="validate" />
                             <label for="password">Password</label>
                         </div>
                         <div class="input-field col s6">
-                            <input id="input_text" type="text" data-length="10">
+                            <input id="no_hp" name="noHp" type="text" data-length="10">
                             <label for="input_text">Nomor HP</label>
                           </div>
                         <div class="input-field col s6">
@@ -68,11 +68,11 @@
                             <label>Jenis Kelamin</label>
                         </div>
                         <div class="input-field col s12">
-                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <textarea id="alamat" name="alamat" class="materialize-textarea"></textarea>
                             <label for="textarea1">Alamat</label>
                         </div>
                         <div class="center">
-                            <a class="waves-effect center waves-light btn-small blue lighten-2">Buat Akun</a>
+                            <a id="register-btn" onclick="register()" class="waves-effect center waves-light btn-small blue lighten-2">Buat Akun</a>
                             <p>Sudah Memiliki Akun ? <a class="modal-trigger" href="#modal1"> LOGIN</a></p>
                             <!-- <p>Sudah Memiliki Akun ? <a href="./login.html">LOGIN</a></p> -->
                         </div>
@@ -113,6 +113,7 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="../../js/materialize.js"></script>
     <script src="../../js/init.js"></script>
+    <script src="../../js/api/register.js"></script>
 
 
     <script>
@@ -123,10 +124,10 @@
             });
         })
         //untk jenis kelamin
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('select');
-            var instances = M.FormSelect.init(elems, options);
-        });
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     const elems = document.querySelectorAll('select');
+        //     const instances = M.FormSelect.init(elems, options);
+        // });
 
         // Or with jQuery
 
