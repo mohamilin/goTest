@@ -4,6 +4,7 @@ const register = async () => {
     let inputLastName = document.getElementById("last_name").value;
     let inputEmail = document.getElementById("email").value;
     let inputPassw = document.getElementById("password").value;
+    let inputGender = document.getElementById("gender").value;
     let inputPhone = document.getElementById("no_hp").value;
     let inputAddress = document.getElementById("alamat").value;
 
@@ -14,6 +15,7 @@ const register = async () => {
         lastName: inputLastName,
         email: inputEmail,
         password: inputPassw,
+        gender: inputGender,
         noHp: inputPhone,
         alamat: inputAddress
     };
@@ -31,6 +33,7 @@ const register = async () => {
         options
     );
     let result = await response.json();
+    window.location.replace("../auth/login.html");
     console.log(result);
 };
 
