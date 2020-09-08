@@ -40,7 +40,7 @@ const getDataRS = async () => {
                   <p id='hospitalCity'>${el.KotaRS}</p>
                   <div class="service">
                   </div>
-                  <a class="waves-effect waves-light btn btn-small-pilih toFormButton" href="#"><i class="material-icons right"  >arrow_forward</i>pilih lokasi tes</a>
+                  <a class="waves-effect waves-light btn btn-small-pilih toFormButton" href="/pages/booking/form-booking.html""><i class="material-icons right"  >arrow_forward</i>pilih lokasi tes</a>
                 </div>
                 </div>
               </div>
@@ -75,7 +75,9 @@ const getDataRS = async () => {
       console.log(formButton)
       formButton.addEventListener('click',function(){
         console.log(el)
+        localStorage.setItem('hospitalData',JSON.stringify(el.namaRumahSakit))
       })
+
 
 
     });
