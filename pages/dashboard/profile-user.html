@@ -35,51 +35,72 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container ">
     <div class="row ">
-        <div class="col s4 img-profile">
-           <img src="" alt="profile" srcset="">
+        <div class="col s4 img-profile" id="avatar">
         </div>
         <div class="col s6">
             <!-- start -->
             <div class="row">
-                <form class="col s12">
+              <h2 style="font-size:40px">Profile User</h2>
+              <table class="col s9">
+                <tr>
+                  <th>Nama Depan</th>
+                  <th id="first_name"></th>
+                </tr>
+                <tr>
+                  <th>Nama Belakang</th>
+                  <th id="last_name"></th>
+                </tr>
+                <tr>
+                  <th>Email</th>
+                  <th id="email"></th>
+                </tr>
+                <tr>
+                  <th>No HP</th>
+                  <th id="no_hp"></th>
+                </tr>
+                <tr>
+                  <th>Alamat</th>
+                  <th id="address"></th>
+                </tr>
+              </table>
+                <!-- <form class="col s12">
                     <h2 class="reg-title">Profile User</h2>
                     <div class="input-field col s6">
-                        <input placeholder="Nama Depan" id="first_name" type="text" class="validate" />
+                        <input placeholder="Nama Depan" name="firstName" id="first_name" type="text" class="validate" />
                         <label for="first_name">Nama Depan</label>
+                        <p id="first_name"></p>
                     </div>
                     <div class="input-field col s6">
-                        <input id="last_name" type="text" class="validate" />
+                        <input id="last_name" name="lastName" type="text" class="validate" />
                         <label for="last_name">Nama Belakang</label>
                     </div>
                     <div class="input-field col s12">
-                        <input id="email" type="email" class="validate" />
+                        <input id="email" name="email" type="email" class="validate" />
                         <label for="email">Email</label>
                     </div>
                     <div class="input-field col s12">
-                        <input id="password" type="password" class="validate" />
+                        <input id="password" name="password" type="password" class="validate" />
                         <label for="password">Password</label>
                     </div>
                     <div class="input-field col s6">
-                        <input id="input_text" type="text" data-length="10">
+                        <input id="input_text" name="noHp" type="text" data-length="10">
                         <label for="input_text">Nomor HP</label>
                       </div>
                     <div class="input-field col s6">
                         <select>
-                            <!-- <option value="" disabled selected>Pilih Jenis Kelamin</option> -->
                             <option value="1">Laki-Laki</option>
                             <option value="2">Perempuan</option>
                         </select>
                         <label>Jenis Kelamin</label>
                     </div>
                     <div class="input-field col s12">
-                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                        <textarea id="textarea1" name="alamat" class="materialize-textarea"></textarea>
                         <label for="textarea1">Alamat</label>
                     </div>
                     <div class="center col s12">
                         <a class="waves-effect waves-light blue darken-1 btn">Update</a>
-                        <a class="waves-effect waves-light red darken-1 btn">Delete</a>
                     </div>
-                </form>
+                </form> -->
             </div>
             <!-- end -->
         </div>
@@ -130,11 +151,12 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="../../js/materialize.js"></script>
   <script src="../../js/init.js"></script>
+  <script src="../../js/api/profile.js"></script>
   <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('select');
-            var instances = M.FormSelect.init(elems, options);
-        });
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     var elems = document.querySelectorAll('select');
+        //     var instances = M.FormSelect.init(elems, options);
+        // });
 
         // Or with jQuery
 
