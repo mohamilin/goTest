@@ -30,16 +30,9 @@ const showProfileUser = async () => {
   
       let showGender = document.getElementById("gender");
       showGender.value = `${result.gender}`;
-  
-    //   let show4 = document.getElementById("no_hp");
-    //   show4.value = `: ${result.noHp}`;
-  
+
       let show5 = document.getElementById("address");
       show5.value = `${result.alamat}`;
-  
-    //   let show6 = document.getElementById("avatar");
-    //   show6.innerHTML = `
-    //   <img name="avatar" id="avatar" src=" ${result.avatar}" alt="profile" srcset="">`;
   
     const position = document.getElementById("hospital");
     const about = document.getElementById("about");
@@ -57,4 +50,16 @@ const showProfileUser = async () => {
     }
   };
   showProfileUser();
+
+  let user = JSON.parse(localStorage.getItem('user'))
+
+ function checkout() {
+     if(user !== null) {
+         alert("Terima Kasih sudah Memesan");
+         window.location.replace("../../index.html");
+     } else {
+         alert("silahkan login dulu");
+     }
+ }
+
 

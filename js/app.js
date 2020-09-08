@@ -24,8 +24,6 @@ const showProfile = async () => {
     }
 
 
-   
-
   } catch (error) {
     console.log("erro");
   }
