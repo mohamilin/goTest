@@ -7,7 +7,7 @@ const register = async () => {
     let inputPhone = document.getElementById("no_hp").value;
     let inputAddress = document.getElementById("alamat").value;
 
-    console.log("test", inputFirtsName, inputLastName, inputEmail, inputPassw, inputPhone, inputAddress);
+    // console.log("test", inputFirtsName, inputLastName, inputEmail, inputPassw, inputPhone, inputAddress);
 
     let userData = {
         firstName: inputFirtsName,
@@ -17,23 +17,6 @@ const register = async () => {
         noHp: inputPhone,
         alamat: inputAddress
     };
-
-    // ngePost DATA
-    // let options = {
-    //     method: "POST",
-    //     headers: {
-    //         "Content-Type": "aplication/json",
-    //     },
-    //     body: JSON.stringify(userData)
-    // };
-
-    // let response = await fetch(
-    //     "https://5f51b1f85e98480016123cb6.mockapi.io/users", 
-    //     options
-    // );
-    // let result = await response.json();
-    // console.log(result)
-
 
 
     let options = {
@@ -51,11 +34,3 @@ const register = async () => {
     console.log(result);
 };
 
-
-// buat function async await register
-// const register = async () => {
-//     console.log("register");
-
-//  
-//   };
-// }
