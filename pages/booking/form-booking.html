@@ -32,11 +32,11 @@
       <div class="nav-wrapper container">
         <a id="logo-container" href="#" class="brand-logo">GoTest</a>
         <ul class="right hide-on-med-and-down">
-          <a class="waves-effect waves-light pink darken-1 btn-small button-border modal-trigger" href="#modal1">LOGIN</a>
-          <!-- <a class="waves-effect waves-light pink darken-1 btn-small button-border"  href="./pages/auth/login.html">Login</a> -->
+          <!-- <a class="waves-effect waves-light pink darken-1 btn-small button-border modal-trigger" href="#modal1">LOGIN</a> -->
+          <a id="login-nav" class="waves-effect waves-light pink darken-1 btn-small button-border"  href="../auth/login.html">Login</a>
           <li><a href="../../index.html">Home</a></li>
           <li><a href="../hospital/list-hospital.html">Cari Rumah Sakit</a></li>
-          <li><a href="../homepage/about.html">Tentang Kami</a></li>
+          <li id="about"><a href="../homepage/about.html">Tentang Kami</a></li>
         </ul>
   
         <ul id="nav-mobile" class="sidenav">
@@ -245,6 +245,8 @@
     <script src="../../js/materialize.js"></script>
     <script src="../../js/init.js"></script>
     <script src="./for-form.js"></script>
+    <script src="../../js/api/login.js"></script>
+    <script src="../../js/api/connectLogin/hospital.js"></script>
   </body>
 
     <!-- script auto initialization js materialize -->

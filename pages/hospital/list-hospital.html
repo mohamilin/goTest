@@ -19,17 +19,15 @@
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">GoTest</a>
       <ul class="right hide-on-med-and-down">
-        <a class="waves-effect waves-light pink darken-1 btn-small button-border modal-trigger" id= 'user-status' href="#modal1">LOGIN</a>
-
-        <!-- <a class="waves-effect waves-light pink darken-1 btn-small button-border">Login</a> -->
+        <a id="login-nav" class="waves-effect waves-light pink darken-1 btn-small button-border" href="../auth/login.html">Login</a>
         <li><a href="../../index.html">Home</a></li>
         <li><a href="./list-hospital.html">Cari Rumah Sakit</a></li>
-        <li><a href="../homepage/about.html">Tentang Kami</a></li>
+        <li id="about"><a href="../homepage/about.html">Tentang Kami</a></li>
       </ul>
       <ul id="nav-mobile" class="sidenav">
         <li><a href="../../index.html">Home</a></li>
         <li><a href="./list-hospital.html">Cari Rumah Sakit</a></li>
-        <li><a href="../homepage/about.html">Tentang Kami</a></li>    
+        <li id="about"><a href="../homepage/about.html">Tentang Kami</a></li>    
         <li><a class="waves-effect waves-light pink darken-1 btn-small button-border modal-trigger" href="../auth/login.html">LOGIN</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>    
@@ -175,32 +173,6 @@
 
 
 
-  <!-- POP UP untuk halaman LOGIN -->
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal box-modal">
-    <div class="modal-content">
-        <!-- isi dari pop up -->
-        <div class="center-login">
-            <h3 class="blue-text">Let’s get started</h3>
-            <h6>Silahkan Masukkan Email dan Password Anda agar Kami dapat Memberikan Layanan Go Test.</h6>    
-        </div>
-        <form action="#">
-            <div class="input-field">
-                <i class="material-icons prefix">person</i>
-                <input type="text" id="email">
-                <label for="email">Email</label>
-            </div>
-            <div class="input-field">
-                <i class="material-icons prefix">lock</i>
-                <input type="text" id="pass">
-                <label for="pass">Password</label>
-            </div>
-            <input type="submit" value="Login" class="btn btn-large">
-            <p class="center">Belum Memiliki Akun ? <a href="../auth/register.html">DAFTAR</a></p>
-        </form>
-    </div>
-</div>
   <!--  Scripts-->
   
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -208,18 +180,9 @@
   <script src="../../js/init.js"></script>
   <script src="/pages/hospital/script-hospital.js"></script>
   <script src="/pages/hospital/database-sementara.js"></script>
+  <script src="../../js/api/login.js"></script>
+  <script src="../../js/api/connectLogin/hospital.js"></script>
 
-  <!-- script pop up login -->
-  <script>
-    $(document).ready(function () {
-        $('.modal').modal({
-            // dismissible: true,
-            // preventScrolling: false
-        });
-    })
-  </script>
-
-  
   </body>
   
 
