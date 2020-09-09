@@ -18,9 +18,20 @@ const showProfile = async () => {
       <a onClick="logout()" class="waves-effect waves-light grey lighten-3 black-text btn-small button-border modal-trigger"">LOGOUT</a>
       `;
 
+      const position1 = document.getElementById("login-nav-mob");
+      position1.innerHTML = `${result.firstName} ${result.lastName}`;
+  
+      const about1 = document.getElementById("about-mob");
+      about1.innerHTML = `
+        <a onClick="logout()" class="waves-effect waves-light grey lighten-3 black-text btn-small button-border modal-trigger"">LOGOUT</a>
+        `;
+  
+
     if (user !== null) {
       position.removeAttribute("href");
-      position.setAttribute("href", "../../pages/dashboard/profile-user.html")
+      position.setAttribute("href", "../../pages/dashboard/profile-user.html");
+      position1.removeAttribute("href");
+      position1.setAttribute("href", "../../pages/dashboard/profile-user.html")
     }
 
   } catch (error) {
