@@ -7,7 +7,6 @@ const showProfileUser = async () => {
         `https://5f51b1f85e98480016123cb6.mockapi.io/users/${user.id}`
     );
 
-
     let result = await response.json();
     // console.log(result.firstName);
 
@@ -33,7 +32,7 @@ const showProfileUser = async () => {
     show6.innerHTML = `
     <img name="avatar" id="avatar" src=" ${result.avatar}" alt="profile" srcset="">`;
 
-    const position = document.getElementById("hospital");
+    const position = document.getElementById("login-nav");
     const about = document.getElementById("about");
     about.innerHTML = `
       <a onClick="logout()" class="waves-effect waves-light grey lighten-3 black-text btn-small button-border modal-trigger"">LOGOUT</a>
@@ -53,7 +52,13 @@ showProfileUser();
 
 
 function logout() {
-  console.log("tes logout");
+  // console.log("tes logout");
   localStorage.clear();
   window.location.replace("../../index.html");
+}
+
+async function update() {
+  let user = JSON.parse(localStorage.getItem("user"));
+  console.log(user.id);
+  // let url = ``
 }

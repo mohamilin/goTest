@@ -17,7 +17,7 @@
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">GoTest</a>
       <ul class="right hide-on-med-and-down">
-        <a id="hospital" class="waves-effect waves-light pink darken-1 btn-small button-border">Login</a>
+        <a id="login-nav" class="waves-effect waves-light pink darken-1 btn-small button-border">Login</a>
         <li><a href="../../index.html">Home</a></li>
         <li><a href="../hospital/list-hospital.html">Cari Rumah Sakit</a></li>
         <li id="about"><a href="../homepage/about.html">Tentang Kami</a></li>
@@ -26,8 +26,8 @@
       <ul id="nav-mobile" class="sidenav">
         <li><a href="../../index.html">Home</a></li>
         <li><a href="../hospital/detail-hospital.html">Cari Rumah Sakit</a></li>
-        <li><a href="../homepage/about.html">Tentang Kami</a></li>
-        <li><a class="waves-effect waves-light pink darken-1 btn-small button-border" id="login-btn">Login</a></li>
+        <li id="about-mob"><a href="../homepage/about.html">Tentang Kami</a></li>
+        <li><a id="login-nav-mob" class="waves-effect waves-light pink darken-1 btn-small button-border" id="login-btn">Login</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
@@ -41,7 +41,7 @@
             <!-- start -->
             <div class="row">
               <form class="col s12">
-                  <h2 class="reg-title">EDIT PROFILE</h2>
+                  <h2 class="reg-title">EDIT DATA <br> PROFILE USER</h2>
                   <div class="input-field col s6">
                       <input placeholder="Nama Depan" name="firstName" id="first_name" type="text" class="validate" />
                       <label for="first_name">Nama Depan</label>
@@ -70,14 +70,15 @@
                       <textarea id="alamat" name="alamat" class="materialize-textarea"></textarea>
                       <label for="textarea1">Alamat</label>
                   </div>
+                  <div class="center">
+                    <a id="update" onclick="update()" class=" blue waves-effect waves-light btn">SAVE</a>
+                </div>
               </form>
           </div>
             <!-- end -->
         </div>
     </div>
-    <div class="center">
-      <a id="update" class=" blue waves-effect waves-light btn">SAVE</a>
-  </div>
+    
 <br> <br>
   </div>
 
