@@ -66,9 +66,8 @@
               <div class="input-field col l2 s12">
                 <select multiple>
                   <option class = "grey" value="" disabled selected>method:</option>
-                  <option value="1">Rapid test</option>
-                  <option value="2">PCR / Swab test</option>
-                  
+                  <option value="true" id = 'method-rapid'>Rapid test</option>
+                  <option value="true" id = 'method-swab'>PCR / Swab test</option>
                 </select>
                 <!-- <label>Materialize Multiple Select</label> -->
               </div>
@@ -115,7 +114,7 @@
       </div>
 
       <div class="row">
-        <div class="col l12">
+        <div class="col l12 s12">
           <ul class="pagination center">
               <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
               <li class="active light-blue lighten-1"><a href="#!">1</a></li>
