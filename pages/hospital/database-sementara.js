@@ -120,6 +120,14 @@ getDataRS();
 
 function cariRS(data,listContainer){
   let cariRumahSakit = document.getElementById('cariRumahSakit').value
+  // let rapidMethod = document.getElementById('method-rapid').value
+  // console.log(rapidMethod)
+  // let swabMethod = document.getElementById('method-swab').value
+  // console.log(swabMethod)
+
+  let methodTest = [];
+  methodTest.getSelectedValues()
+
 
   
 
@@ -135,7 +143,67 @@ function cariRS(data,listContainer){
 
     console.log(resultFilter);
 
-    listContainer.clearChildren
+    listContainer.innerHTML=``
     console.log(listContainer)
+
+    resultFilter.forEach((el,index) => {
+      let hospitalContainer = document.createElement("div");
+      hospitalContainer.className = "hospitalCard";
+      hospitalContainer.innerHTML = `
+          <div class="row">
+            <div class="container-list-host row" id='container-list-host'>
+              <div class="row">
+                <div class="col l4 s3 img-field" style ="background-image: url('${el.img}')">
+                </div>
+                <div class="col  l8 s9">
+                  <p id="hospitalName">${el.namaRumahSakit}</p>
+                    <span id="hospitalAdress">${el.alamatRS}</span>  
+                  </p>
+                  <p id='hospitalCity'>${el.KotaRS}</p>
+                  <div class="service">
+                  </div>
+                  <a class="waves-effect waves-light btn btn-small-pilih toFormButton" href="/pages/booking/form-booking.html""><i class="material-icons right"  >arrow_forward</i>pilih lokasi tes</a>
+                </div>
+                </div>
+              </div>
+            </div>
+          `;
+
+      listContainer.appendChild(hospitalContainer);
+
+      let service = document.getElementsByClassName("service");
+      let serviceProvided = document.createElement("div");
+
+      for (let i = 0; i < service.length; i++) {
+        if (el.pcr && el.rapid) {
+          serviceProvided.innerHTML = `
+              <p><span id="test-method">&check; Rapid test </span><span class="price">(Rp ${el.biayapcr})</p>
+              <p><span id="test-method">&check; PCR / Swab test </span><span class="price">(Rp ${el.biayarapid})</p>
+              `;
+          service[i].appendChild(serviceProvided);
+        } else if (el.pcr == true && el.rapid == false) {
+          serviceProvided.innerHTML = `
+              <p><span id="test-method">&check; PCR / Swab test </span><span class="price">(Rp ${el.biayapcr})</p>`;
+          service[i].appendChild(serviceProvided);
+        } else if (el.pcr == false && el.rapid == true) {
+          serviceProvided.innerHTML = `
+              <p><span id="test-method">&check; Rapid test </span><span class="price">(Rp ${el.biayarapid})</p>`;
+          service[i].appendChild(serviceProvided);
+        }
+      }
+
+
+      let formButton = document.getElementsByClassName('toFormButton')[index];
+      console.log(formButton)
+      formButton.addEventListener('click',function(){
+        console.log(el)
+        localStorage.setItem('hospitalData',JSON.stringify(el.namaRumahSakit))
+      })
+
+
+
+    });
+
+
 }
 
