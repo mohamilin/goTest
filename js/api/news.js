@@ -1,4 +1,4 @@
-fetch("https://5f51b1f85e98480016123cb6.mockapi.io/news-covid")
+fetch("https://5f51b1f85e98480016123cb6.mockapi.io/covid-news")
     .then(function (response) {
         return response.json();
     })
@@ -10,14 +10,13 @@ fetch("https://5f51b1f85e98480016123cb6.mockapi.io/news-covid")
     });
 
 function getData(data){
-    for(let i = 10; i < data.length; i++ ){
+    for(let i = 4; i < data.length; i++ ){
         const div = document.createElement('div');
         div.className = 'col s12 m4';
-
         div.innerHTML = 
         `
             <div class="card indigo lighten-5">
-            <div class="card-content white-text  card-api">
+            <div class="card-content white-text card-api">
             <div class="card-image">
             <img src="../../assets/kuburan_antara1.jpg">
           </div> <br>
