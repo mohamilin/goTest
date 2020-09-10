@@ -64,12 +64,12 @@
                   <label for="disabled">Jenis Kelamin</label>
                 </div>
                 <div class="input-field col s6">
-                  <select>
+                  <select id="test" onchange="myTest()">
                     <option value="" disabled selected>
                       Pilih Jenis Test
                     </option>
-                    <option value="1">Rapid Test</option>
-                    <option value="2">PCR / SWAB</option>
+                    <option value="biayarapid">Rapid Test</option>
+                    <option value="biayapcr">PCR / SWAB</option>
                   </select>
                 </div>
                 <div class="input-field col s12">
@@ -184,21 +184,31 @@
   <!-- <script src="../hospital/database-sementara.js"></script> -->
   <script>
     M.AutoInit();
-
+/*
     const showHost = async () => {
       try {
         let host = JSON.parse(localStorage.getItem('hospitalData'));
-        let response = await fetch(`https://5f55a45f39221c00167fb0c7.mockapi.io/covid19/RumahSakit`);
+        let url = 'https://5f55a45f39221c00167fb0c7.mockapi.io/covid19/RumahSakit';
+        let response = await fetch(url);
         let result = await response.json();
         console.log('hasil', result[0].biayapcr);
-        const divFee = document.getElementById('fee');
-          divFee.innerHTML = `: Rp ${result[0].biayapcr}`;
+       
+        // const divFee = document.getElementById('fee');
+        //   divFee.innerHTML = `: Rp ${result[0].biayapcr}`;
+        
+        // const selectTest = document.getElementById("test").value;
+      document.getElementById("fee").innerHTML = `Rp : ${result[0].selectTest}`;
+      // console.log("hai =", result[0].selectTest);
+
       } catch (error) {
         console.log("maaf")
       }
     }
 
     showHost();
+    */
+
+  
 
   </script>
 </body>

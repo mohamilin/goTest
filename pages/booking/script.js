@@ -6,6 +6,22 @@ console.log(formBanner)
 
 formBanner.innerHTML = `Formulir Antrian Tes Covid-19 <br> ${rsName}`;
 
+
+
+function myTest() {
+  let pcr = JSON.parse(localStorage.getItem('biayapcr'))
+  let rapid = JSON.parse(localStorage.getItem('biayarapid'))
+  console.log(pcr, rapid)
+  const select = document.getElementById('test').value;
+  if(select === 'biayarapid' ){
+    document.getElementById('fee').innerHTML = `Rp : ${rapid}`;
+  } else {
+    document.getElementById('fee').innerHTML = `Rp : ${pcr}`;
+  }
+}
+
+
+
 const showProfileUser = async () => {
   try {
     let user = JSON.parse(localStorage.getItem("user"));
