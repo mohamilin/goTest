@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>GoTest - Akurat, Aman dan Bahagia</title>
+
+    <!-- CSS  -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="../../css/materialize.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="../../css/style.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+  </head>
+
+  <body>
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">GoTest</a>
+        <ul class="right hide-on-med-and-down">
+          <a id="login-nav" class="waves-effect waves-light pink darken-1 btn-small button-border"  href="../auth/login.html">Login</a>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../hospital/list-hospital.html">Cari Rumah Sakit</a></li>
+          <li id="about"><a href="../homepage/about.html">Tentang Kami</a></li>
+        </ul>
+  
+        <ul id="nav-mobile" class="sidenav">
+          <li><a class="" href="../../index.html">Home</a></li>
+          <li><a href="../hospital/list-hospital.html">Cari Rumah Sakit</a></li>
+          <li id="about-mob"><a  href="../homepage/about.html">Tentang Kami</a></li>
+          <li><a id="login-nav-mob" class="waves-effect waves-light pink darken-1 btn-small button-border"
+              href="./pages/auth/login.html">LOGIN</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+      <div class="container">
+        <h3 style="text-align: center" id='form-header'>Confirm Your Reservation</h3>
+        <!-- Diisi form pemesanan test -->
+        <div class="container" style="padding: 15px 60px 0 60px">
+          <div class="card ">
+            <!-- Card Content -->
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input id="first_name" value="firstName" type="text" class="validate"/>
+                    <label for="first_name">Nama Depan</label>
+                  </div>
+                  <div class="input-field col s6">
+                    <input id="last_name" value="lastName" type="text" class="validate" />
+                    <label for="last_name">Nama Belakang</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input value="gender" id="gender" type="text" class="validate">
+                    <label for="disabled">Jenis Kelamin</label>
+                  </div>
+                  <div class="input-field col s6">
+                    <select >
+                      <option value="" disabled selected>Pilih Jenis Test</option>
+                      <option value="1">Rapid Test </option>
+                      <option value="2">PCR / SWAB </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input  id="address" value="alamat" type="text" class="validate"
+                    />
+                    <label for="Address">Alamat Lengkap</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                  <label>Pilih Tanggal Test</label>
+                  <input type="text" class="datepicker">
+                  </div>  
+                </div>
+                <div class="row">
+                <div class="row input-field col s12">
+                  <select>
+                    <optgroup label="Pagi">
+                      <option value="1">08.00</option>
+                      <option value="2">10.00</option>
+                      <option value="2">12.00</option>
+                    </optgroup>
+                    <optgroup label="Siang">
+                      <option value="3">14.00</option>
+                      <option value="4">16.00</option>
+                    </optgroup>
+                  </select>
+                  <label>Pilih jam pemeriksaan</label>
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col s12">
+                  </div>
+                </div>
+                <div class="col">
+                <div class="input-field col s12">
+                  <a onclick="checkout()" id="checkout" class="waves-effect waves-light btn btn-lanjutkan-fold"><i class="material-icons right">arrow_forward</i>CHECKOUT</a>
+                </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer teal darken-4">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Go Test</h5>
+            <p class="grey-text text-lighten-4">
+              Modern CoSpace Jl. HR Rasuna Said Kav B-34, 4th Floor, Kuningan,
+              Jakarta 12940. <br />
+              Phone: +6285574677403 Email: help@gotest.id
+            </p>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Site Map</h5>
+            <ul>
+              <li><a class="white-text" href="#!">FAQ</a></li>
+              <li><a class="white-text" href="#!">Blog</a></li>
+              <li><a class="white-text" href="#!">Syarat dan Ketentuan</a></li>
+              <li><a class="white-text" href="#!">Karir</a></li>
+            </ul>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Go Test</h5>
+            <ul>
+              <li><a class="white-text" href="#!">Tentang Kami</a></li>
+              <li><a class="white-text" href="#!">Kontak Kami</a></li>
+              <li><a class="white-text" href="#!">Proteksi Go Test</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <div class="white-text">Go Test - 2020 All Right Reversed</div>
+        </div>
+      </div>
+    </footer>
+
+ 
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../../js/materialize.js"></script>
+    <script src="../../js/init.js"></script>
+    <script src="./script.js"></script>
+    <script src="../../js/api/login.js"></script>
+    <script src="../../js/api/connectLogin/hospital.js"></script>
+  </body>
+
+    <!-- script auto initialization js materialize -->
+    <script>
+  M.AutoInit();
+  </script>
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html>
+</html>

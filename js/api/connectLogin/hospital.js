@@ -40,6 +40,8 @@ const showProfile = async () => {
 };
 showProfile();
 
+
+
 function logout() {
   console.log("tes logout");
   localStorage.clear();
