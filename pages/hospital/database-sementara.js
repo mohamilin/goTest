@@ -208,6 +208,8 @@ function cariRS(data,listContainer){
       formButton.addEventListener('click',function(){
         console.log(el)
         localStorage.setItem('hospitalData',JSON.stringify(el.namaRumahSakit))
+        localStorage.setItem('biayapcr',JSON.stringify(el.biayapcr))
+        localStorage.setItem('biayarapid',JSON.stringify(el.biayarapid))
       })
 
 
