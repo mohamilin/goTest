@@ -40,7 +40,7 @@ const getDataRS = async () => {
                   <p id='hospitalCity'>${el.KotaRS}</p>
                   <div class="service">
                   </div>
-                  <a class="waves-effect waves-light btn btn-small-pilih toFormButton" href="/pages/booking/form-booking.html""><i class="material-icons right"  >arrow_forward</i>pilih lokasi tes</a>
+                  <a onClick="lanjutkan()" class="waves-effect waves-light btn btn-small-pilih toFormButton" href="#"><i class="material-icons right"  >arrow_forward</i>pilih lokasi tes</a>
                 </div>
                 </div>
               </div>
@@ -172,7 +172,7 @@ function cariRS(data,listContainer){
                   <p id='hospitalCity'>${el.KotaRS}</p>
                   <div class="service">
                   </div>
-                  <a class="waves-effect waves-light btn btn-small-pilih toFormButton" href="/pages/booking/form-booking.html""><i class="material-icons right"  >arrow_forward</i>pilih lokasi tes</a>
+                  <a class="waves-effect waves-light btn btn-small-pilih toFormButton" href="../booking/form-booking.html"><i class="material-icons right"  >arrow_forward</i>pilih lokasi tes</a>
                 </div>
                 </div>
               </div>
@@ -215,5 +215,17 @@ function cariRS(data,listContainer){
     });
 
 
+}
+
+let user = JSON.parse(localStorage.getItem('user'))
+
+function lanjutkan() {
+    if(user !== null) {
+        alert("Terima Kasih sudah Memesan");
+        window.location.replace("../booking/form-booking.html")
+    } else {
+        alert("silahkan login dulu");
+        window.location.replace("../auth/login.html")
+    }
 }
 

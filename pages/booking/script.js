@@ -1,11 +1,10 @@
 let rsName = JSON.parse(localStorage.getItem('hospitalData'))
-
+console.log(rsName)
 let formBanner = document.getElementById('form-header');
 
 console.log(formBanner)
 
 formBanner.innerHTML=`Formulir Antrian Tes Covid-19 <br> ${rsName}`;
-
 
 const showProfileUser = async () => {
     try {
