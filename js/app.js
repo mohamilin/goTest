@@ -47,5 +47,5 @@ showProfile();
 function logout() {
   console.log("tes logout");
   localStorage.clear();
-  window.location.replace("index.html");
+    window.location.replace("index.html");
 }

@@ -72,9 +72,17 @@ let user = JSON.parse(localStorage.getItem('user'))
 
 function checkout() {
   if (user !== null) {
-    alert("Terima Kasih sudah Memesan");
-    window.location.replace("../../index.html");
-  } else {
-    alert("silahkan login dulu");
+    Swal.fire({
+      title: 'Sweet!',
+      text: 'Terima Kasih Telah Menggunakan Jasa Kami',
+      imageUrl: 'https://unsplash.it/400/200',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Custom image',
+    })
+
+    setTimeout(function() {
+      window.location.replace("../../index.html");
+    }, 3000);
   }
 }

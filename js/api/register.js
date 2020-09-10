@@ -33,7 +33,18 @@ const register = async () => {
         options
     );
     let result = await response.json();
-    window.location.replace("../auth/login.html");
+
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Pendaftaran Akun Berhasil',
+        showConfirmButton: false,
+        timer: 1500
+      })
+      setTimeout(function() {
+        window.location.replace("../auth/login.html");
+    }, 2000);
+
     console.log(result);
 };
 

@@ -228,8 +228,18 @@ function lanjutkan() {
         // alert("Terima Kasih sudah Memesan");
         window.location.replace("../booking/form-booking.html")
     } else {
-        alert("silahkan login dulu");
-        window.location.replace("../auth/login.html")
+        // alert("silahkan login dulu");
+        Swal.fire({
+          icon: 'warning',
+          title: 'Oops...',
+          showConfirmButton: false,
+          text: 'Silahkan login dulu',
+          timer: 1000
+        })
+        // window.location.replace("../auth/login.html")
+        setTimeout(function() {
+          window.location.replace("../auth/login.html")
+        }, 2000)
     }
 }
 

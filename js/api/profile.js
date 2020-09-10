@@ -56,9 +56,3 @@ function logout() {
   localStorage.clear();
   window.location.replace("../../index.html");
 }
-
-async function update() {
-  let user = JSON.parse(localStorage.getItem("user"));
-  console.log(user.id);
-  // let url = ``
-}

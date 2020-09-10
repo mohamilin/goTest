@@ -170,7 +170,11 @@ p.text-about {
  border-radius: 100%;
  height: 200px;
  width: 200px;
- 
+}
+
+.img-edit >img {
+  margin-top: 130px;
+  width: 100%;
 }
 
 #fee {

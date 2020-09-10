@@ -1,90 +1,92 @@
-async function updateProfile() {
+const showUpdateUser = async () => {
     try {
-        let user = JSON.parse(localStorage.getItem("user"));
-        console.log(user.gender);
-
-        let response = await fetch(
-        `https://5f51b1f85e98480016123cb6.mockapi.io/users/${user.id}`);
-
-    } catch (error) {
-        
-    }
-}
+      let user = JSON.parse(localStorage.getItem("user"));
+      console.log(user.firstName);
+      console.log(user); 
+      let response = await fetch(
+          `https://5f51b1f85e98480016123cb6.mockapi.io/users/${user.id}`
+      );
   
+      let result = await response.json();
+      // console.log(result.firstName);
+  
+      const position = document.getElementById("login-nav");
+      const about = document.getElementById("about");
+      position.innerHTML = `${result.firstName} ${result.lastName}`;
+      about.innerHTML = `
+        <a onClick="logout()" class="waves-effect waves-light grey lighten-3 black-text btn-small button-border modal-trigger"">LOGOUT</a>
+        `;
 
-
-  // // --------------- ELEMENTS ----------------
-// let saveBtn = document.getElementById("button");
-
-// --------------- FUNCTION ----------------
-/*
-async function saveProfile() {
-    try {
-        let user = JSON.parse(localStorage.getItem("user"));
-        console.log(user);
-
-        let id = user.id;
-        console.log(id);
-        let endpoint = `https://5ef168ca1faf160016b4d5b5.mockapi.io/api/users/${id}`;
-        let response = await fetch(endpoint);
-        let results = await response.json();
-        console.log(results);
-
-        let title = document.getElementById("title").value;
-        let desc = document.getElementById("desc").value;
-        let contact = document.getElementById("contact").value;
-        let birthday = document.getElementById("birthday").value;
-        let city = document.getElementById("city").value;
-        let skills = document.getElementById("skills").value;
-
-        if (title == "") {
-            title = results.title;
-        }
-        if (desc == "") {
-            desc = results.desc;
-        }
-        if (contact == "") {
-            contact = results.contact;
-        }
-        if (birthday == "") {
-            birthday = results.birthday;
-        }
-        if (city == "") {
-            city = results.city;
-        }
-        if (skills == "") {
-            skills = results.skills;
-        }
-
-        let userData = {
-            title,
-            desc,
-            contact,
-            birthday,
-            city,
-            skills,
-        };
-        console.log(userData);
-
-        let options = {
-            method: "PUT",
-            headers: {
-                "Content-type": "application/json",
-            },
-            body: JSON.stringify(userData),
-        };
-
-        response = await fetch(endpoint, options);
-        console.log(response.json());
-        Swal.fire({
-            position: "center",
-            icon: "success",
-            title: "Saved!",
-            showConfirmButton: true,
-            // timer: 2500,
-        });
+        // untuk mobile
+        const positionMob = document.getElementById("login-nav-mob");
+        const aboutMob = document.getElementById("about-mob");
+        positionMob.innerHTML = `${result.firstName} ${result.lastName}`;
+        aboutMob.innerHTML = `
+          <a onClick="logout()" class="waves-effect waves-light grey lighten-3 black-text btn-small button-border modal-trigger"">LOGOUT</a>
+          `;
+        
+      
+      if(user !== null) {
+        position.removeAttribute("href");
+        position.setAttribute("href", "./profile-user.html")
+        positionMob.removeAttribute("href");
+        positionMob.setAttribute("href", "./profile-user.html")
+      }
+  
     } catch (error) {
-        console.error(error);
+      console.log("erro");
     }
-}
-*/
+  };
+  showUpdateUser();
+  
+  
+  function logout() {
+    // console.log("tes logout");
+    localStorage.clear();
+    window.location.replace("../../index.html");
+  }
+  
+  async function update() {
+    let user = JSON.parse(localStorage.getItem("user"));
+    console.log("test");
+    let link = `https://5f51b1f85e98480016123cb6.mockapi.io/users/${user.id}`;
+    let response = await fetch(link);
+    let data = await response.json();
+    console.log("hasil", data);
+    let editFirstName = document.getElementById('first_name').value;
+    let editLastName = document.getElementById('last_name').value;
+    let editEmail = document.getElementById('email').value;
+    let editPassword = document.getElementById('password').value;
+    let editPhone = document.getElementById('no_hp').value;
+    let editGender = document.getElementById('gender').value;
+    let editAddress = document.getElementById('alamat').value;
+
+    let editData = {
+        ...data,
+        firstName : editFirstName,
+        lastName : editLastName,
+        email : editEmail,
+        password : editPassword,
+        gender: editGender,
+        noHp : editPhone,
+        alamat : editAddress
+    };
+
+    localStorage.setItem("user", JSON.stringify(editData))
+    let options = {
+        method : "PUT",
+        headers :  {
+            "Content-Type" : "application/json",
+        },
+        body : JSON.stringify(editData)
+    };
+
+    fetch(link, options)
+    .then((response) => response.json())
+    .then(()=> {
+        alert ("Terima Kasih, Data Anda sudah Terupdate");
+        window.location.replace("./profile-user.html")
+
+    })
+  }
+  

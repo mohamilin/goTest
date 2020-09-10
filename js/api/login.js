@@ -9,13 +9,35 @@ const login = async () => {
       if (user.length > 0) {
         if (user[0].password === inputPassw) {
           localStorage.setItem("user", JSON.stringify(user[0]));
-          window.location.replace("../../index.html");
+          // alert('')
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Login Anda Berhasil',
+            showConfirmButton: false,
+            timer: 1500
+          })
+          setTimeout(function() {
+            window.location.replace("../../index.html");
+          }, 2000);
         } else {
-          alert("Password Tidak Sesuai");
+          // alert("Password Tidak Sesuai");
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Password Anda Salah',
+            // footer: '<a href>Why do I have this issue?</a>'
+          })
         }
         // alert("sipp");
       } else {
-        alert("Email Tidak Sesuai");
+        // alert("Email Tidak Sesuai");
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Email Anda Salah',
+          // footer: '<a href>Why do I have this issue?</a>'
+        })
       }
     });
 };
