@@ -125,16 +125,16 @@ function cariRS(data,listContainer){
   // let swabMethod = document.getElementById('method-swab').value
   // console.log(swabMethod)
 
-  let methodTest = [];
-  let selectMethodRapid = document.getElementById('method-rapid').value;
-  let selectMethodSwab = document.getElementById('method-swab').value;
-  methodTest.push(selectMethodRapid,selectMethodSwab);
+  // let methodTest = [];
+  // let selectMethodRapid = document.getElementById('method-rapid').value;
+  // let selectMethodSwab = document.getElementById('method-swab').value;
+  // methodTest.push(selectMethodRapid,selectMethodSwab);
 
-  for(let i = 0; i< data.length;i++){
-    if (data[i].{
+  // for(let i = 0; i< data.length;i++){
+  //   if (data[i].{
 
-    }
-  }
+  //   }
+  // }
 
 
 
