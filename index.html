@@ -17,73 +17,177 @@
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">GoTest</a>
       <ul class="right hide-on-med-and-down">
-        <a id="login-nav" class="waves-effect waves-light pink darken-1 btn-small button-border modal-trigger" href="./pages/auth/login.html">LOGIN</a>
+        <a id="login-nav" class="waves-effect waves-light pink darken-1 btn-small button-border modal-trigger"
+          href="./pages/auth/login.html">LOGIN</a>
         <!-- <a class="waves-effect waves-light pink darken-1 btn-small button-border"  href="./pages/auth/login.html">Login</a> -->
-        <li><a  href="./index.html">Home</a></li>
-        <li ><a href="./pages/hospital/list-hospital.html">Cari Rumah Sakit</a></li>
-        <li id="about"><a  href="./pages/homepage/about.html">Tentang Kami</a></li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./pages/hospital/list-hospital.html">Cari Rumah Sakit</a></li>
+        <li id="about"><a href="./pages/homepage/about.html">Tentang Kami</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a  href="./index.html">Home</a></li>
+        <li><a href="./index.html">Home</a></li>
         <li><a href="./pages/hospital/list-hospital.html">Cari Rumah Sakit</a></li>
-        <li id="about-mob"><a  href="./pages/homepage/about.html">Tentang Kami</a></li>
-        <li><a id="login-nav-mob" class="waves-effect waves-light pink darken-1 btn-small button-border modal-trigger" href="./pages/auth/login.html">LOGIN</a>
+        <li id="about-mob"><a href="./pages/homepage/about.html">Tentang Kami</a></li>
+        <li><a id="login-nav-mob" class="waves-effect waves-light pink darken-1 btn-small button-border modal-trigger"
+            href="./pages/auth/login.html">LOGIN</a>
         </li>
         <!-- <li><a class="waves-effect waves-light pink darken-1 btn-small button-border" href="./pages/auth/login.html">Login</a></li> -->
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
+  <!--  -->
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <br /><br />
-      <h1 class="header center orange-text">
-        Keluarga Sehat Lingkungan Aman
-      </h1>
-      <div class="row center">
-        <h5 class="header col s12 light">
-          Test Covid-19 Sekarang juga di Rumah Sakit.
-        </h5>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="icon-block">
+            <h4>Save Yourself <br> Save The World</h4>
+            <p>Test Covid-19 Sekarang juga di Rumah Sakit.</p>
+            <a class="waves-effect light-blue btn" href="./pages/hospital/list-hospital.html">Cari Rumah Sakit</a>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="icon-block">
+            <img class="img-act-4" src="./assets/banner.jpg" alt="" srcset="">
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <br><br>
+
+  <!--  -->
+  <!-- TOTAL KASUS  -->
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <div class="center">
+              <h5 class="orange-text darken-1" id="confirm"></h5>
+              <p class="orange-text darken-1"> POSITIF</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <div class="center">
+              <h5 class="red-text" id="death"></h5>
+              <p class="red-text"> MENINGGAL DUNIA</p>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <div class="center">
+              <h5 class="green-text" id="recorve"></h5>
+              <p class="green-text"> SEMBUH</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <br>
   <div class="container">
     <div class="section">
       <!--   Icon Section   -->
       <div class="row">
-        <div class="col s12 m4">
+        <div class="col s12 m6">
           <div class="icon-block">
             <h2 class="center light-blue-text">
               <img class="activator img-act-1 " src="./assets/corona.png">
               <!-- <i class="material-icons">flash_on</i> -->
             </h2>
-            <h5 class="center"><a href="./pages/homepage/news.html">Covid-19</a></h5>
+            <h5 class="center"><a href="./pages/homepage/news.html">Covid News</a></h5>
           </div>
         </div>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center light-blue-text">
-              <img class="activator img-act-2" src="./assets/undraw_medical_research_qg4d.svg">
-            </h2>
-            <h5 class="center"><a href="./pages/hospital/list-hospital.html">Cari Rumah Sakit</a></h5>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
+        <div class="col s12 m6">
           <div class="icon-block">
             <h2 class="center light-blue-text">
               <img class="activator img-act-3" src="./assets/undraw_social_distancing_2g0u.svg">
             </h2>
-            <h5 class="center"><a href="#">Protokol Kesehatan</a></h5>
+            <h5 class="center"><a href="./pages/homepage/protokol.html">Protokol Kesehatan</a></h5>
           </div>
         </div>
       </div>
     </div>
-    <br /><br />
+    <br />
   </div>
+  <!--  -->
+  <div class="container">
+    <div class="section">
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="icon-block">
+            <p class="text-info">
+              Penyakit COVID-19 (Penyakit Coronavirus) adalah penyakit jenis baru coronavirus yang belum pernah
+              diidentifikasi sebelumnya pada manusia. Coronavirus merupakan keluarga besar virus yang menyebabkan
+              penyakit pada manusia dan hewan. Pada manusia menyebabkan penyakit mulai flu biasa hingga penyakit yang
+              serius seperti Middle East Respiratory Syndrome (MERS) dan Sindrom Pernafasan Akut Berat/ Severe Acute
+              Respiratory Syndrome (SARS).
+            </p>
+          </div>
+        </div>
+
+        <div class="col s12 m6">
+          <div class="icon-block">
+            <img class="img-act-4" src="./assets/covid.jpg" alt="" srcset="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+  </div>
+  <!--  -->
+
+  <div class="section">
+    <div class="container">
+      <div class="icon-block center">
+        <img class="alur" src="./assets/alur-periksa-covid-19.jpg" alt="" srcset="">
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <div class="icon-block center">
+        <h3><em>Gerakan Sehat Indonseia</em></h3>
+      </div>
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="icon-block">
+            <iframe width="420" height="340" src="https://www.youtube.com/embed/Vtc-Yml9hRM" frameborder="0"></iframe>
+            <p>Dampak COVID-19 pada anak-anak di Indonesia</p>
+          </div>
+        </div>
+        <div class="col s12 m6">
+          <div class="icon-block">
+            <iframe width="420" height="340" src="https://www.youtube.com/embed/9ahSHnJThUo" frameborder="0"></iframe>
+            <p>Saran dari UNICEF untuk sekolah agar anak dan remaja dapat tetap belajar di rumah.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!--  -->
+  <div class="section">
+    <div class="container">
+      <div class="icon-block center">
+        <img class="unicef" src="./assets/Adaptasi Kebiasaan Baru_Single image-01_0.jpg" alt="" srcset="">
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
 
 
   <footer class="page-footer teal darken-4">
@@ -123,6 +227,7 @@
         <div class="white-text"> Go Test - 2020 All Right Reversed</div>
       </div>
     </div>
+
   </footer>
 
 
@@ -132,6 +237,34 @@
   <script src="js/init.js"></script>
   <script src="./js/api/login.js"></script>
   <script src="./js/app.js"></script>
+
+  <script>
+    fetch("https://covid19.mathdro.id/api")
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        getData(data);
+      })
+      .catch((err) => {
+        console.log("eror : " + err);
+      });
+
+    function getData(data) {
+      const divConfirm = document.getElementById('confirm');
+      divConfirm.innerHTML = `
+          ${data.confirmed.value}
+        `;
+      const divDeath = document.getElementById('death');
+      divDeath.innerHTML = `
+        ${data.deaths.value}
+        `;
+      const divRecorve = document.getElementById('recorve');
+      divRecorve.innerHTML = `
+        ${data.recovered.value}
+        `;
+    }
+  </script>
 
 </body>
 
