@@ -126,7 +126,17 @@ function cariRS(data,listContainer){
   // console.log(swabMethod)
 
   let methodTest = [];
-  methodTest.getSelectedValues()
+  let selectMethodRapid = document.getElementById('method-rapid').value;
+  let selectMethodSwab = document.getElementById('method-swab').value;
+  methodTest.push(selectMethodRapid,selectMethodSwab);
+
+  for(let i = 0; i< data.length;i++){
+    if (data[i].{
+
+    }
+  }
+
+
 
 
   
