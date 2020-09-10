@@ -111,12 +111,12 @@
               </span>
               <table>
                 <tr>
-                  <th>Total  Rp:</th>
-                  <th>Rp <p id="fee"></span></p>
+                  <th>Total Biaya Test</th>
+                  <th id="fee"></th>
                 </tr>
                 <tr>
-                  <th>Batas Pembayaran :</th>
-                  <th>1 x 24 Jam</th>
+                  <th>Batas Pembayaran </th>
+                  <th>: 1 x 24 Jam</th>
                 </tr>
               </table>
               <br />
@@ -192,8 +192,7 @@
         let result = await response.json();
         console.log('hasil', result[0].biayapcr);
         const divFee = document.getElementById('fee');
-          divFee.innerHTML = `
-        ${result[0].biayapcr}`;
+          divFee.innerHTML = `: Rp ${result[0].biayapcr}`;
       } catch (error) {
         console.log("maaf")
       }
