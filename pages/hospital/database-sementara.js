@@ -221,7 +221,7 @@ let user = JSON.parse(localStorage.getItem('user'))
 
 function lanjutkan() {
     if(user !== null) {
-        alert("Terima Kasih sudah Memesan");
+        // alert("Terima Kasih sudah Memesan");
         window.location.replace("../booking/form-booking.html")
     } else {
         alert("silahkan login dulu");
