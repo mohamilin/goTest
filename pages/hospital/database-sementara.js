@@ -74,8 +74,10 @@ const getDataRS = async () => {
       let formButton = document.getElementsByClassName('toFormButton')[index];
       console.log(formButton)
       formButton.addEventListener('click',function(){
-        console.log(el)
-        localStorage.setItem('hospitalData',JSON.stringify(el.namaRumahSakit))
+        console.log(el);
+        localStorage.setItem('hospitalData',JSON.stringify(el.namaRumahSakit));
+        localStorage.setItem('biayapcr',JSON.stringify(el.biayapcr));
+        localStorage.setItem('biayarapid',JSON.stringify(el.biayarapid));
       })
 
 
@@ -206,12 +208,12 @@ function cariRS(data,listContainer){
       let formButton = document.getElementsByClassName('toFormButton')[index];
       console.log(formButton)
       formButton.addEventListener('click',function(){
-        console.log(el)
-        localStorage.setItem('hospitalData',JSON.stringify(el.namaRumahSakit))
-        localStorage.setItem('biayapcr',JSON.stringify(el.biayapcr))
-        localStorage.setItem('biayarapid',JSON.stringify(el.biayarapid))
+        console.log(el);
+        localStorage.setItem('hospitalData',JSON.stringify(el.namaRumahSakit));
+        localStorage.setItem('biayapcr',JSON.stringify(el.biayapcr));
+        localStorage.setItem('biayarapid',JSON.stringify(el.biayarapid));
       })
-
+      
 
 
     });
