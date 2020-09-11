@@ -84,8 +84,17 @@ const showUpdateUser = async () => {
     fetch(link, options)
     .then((response) => response.json())
     .then(()=> {
-        alert ("Terima Kasih, Data Anda sudah Terupdate");
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Update Success',
+        showConfirmButton: false,
+        timer: 1500
+      })
+      setTimeout(function() {
         window.location.replace("./profile-user.html")
+      }, 2000);
+        // alert ("Terima Kasih, Data Anda sudah Terupdate");
 
     })
   }

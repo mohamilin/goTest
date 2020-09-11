@@ -15,9 +15,15 @@ function myTest() {
   const select = document.getElementById('test').value;
   if(select === 'biayarapid' ){
     document.getElementById('fee').innerHTML = `Rp : ${rapid}`;
-  } else {
+  } else if(select === 'biayapcr') {
     document.getElementById('fee').innerHTML = `Rp : ${pcr}`;
-  }
+  } else {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Anda Belum Memilih Jenis Tes',
+    })
+  } 
 }
 
 
@@ -70,10 +76,11 @@ showProfileUser();
 
 let user = JSON.parse(localStorage.getItem('user'))
 
+
 function checkout() {
   if (user !== null) {
     Swal.fire({
-      title: 'Sweet!',
+      title: 'Checkout Success',
       text: 'Terima Kasih Telah Menggunakan Jasa Kami',
       imageUrl: 'https://unsplash.it/400/200',
       imageWidth: 400,
