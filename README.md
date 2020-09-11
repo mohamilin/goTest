@@ -12,5 +12,5 @@ OUR TEAM :
 1. Aplikasi ini bertujuan untuk mempermudah masyarakat dalam mendapatkan test covid (Rapid / PCR) <br>
     dengan membuat pemesanan test di rumah sakit terdekat / yang dipilih agar masyarakat dapat melakukan <br>
     test sesuai dengan protokol kesehatan sehingga aman dari Covid-19.
-2. Go Test dibangun dengan menggunakan HTML, CSS, JAVASCRIPT, FREAMWORK MATERIALIZE sebagai front-end<br>
+2. Go Test dibangun dengan menggunakan HTML, CSS, JAVASCRIPT, FREAMWORK MATERIALIZE sebagai front-end
     serta untuk data menggunakan MockAPI dan Postman sebagai back-end.
