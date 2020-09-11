@@ -55,8 +55,8 @@ const getDataRS = async () => {
       for (let i = 0; i < service.length; i++) {
         if (el.pcr && el.rapid) {
           serviceProvided.innerHTML = `
-              <p><span id="test-method">&check; Rapid test </span><span class="price">(Rp ${el.biayapcr})</p>
-              <p><span id="test-method">&check; PCR / Swab test </span><span class="price">(Rp ${el.biayarapid})</p>
+              <p><span id="test-method">&check; Rapid test </span><span class="price">(Rp ${el.biayarapid})</p>
+              <p><span id="test-method">&check; PCR / Swab test </span><span class="price">(Rp ${el.biayapcr})</p>
               `;
           service[i].appendChild(serviceProvided);
         } else if (el.pcr == true && el.rapid == false) {
@@ -189,8 +189,8 @@ function cariRS(data,listContainer){
       for (let i = 0; i < service.length; i++) {
         if (el.pcr && el.rapid) {
           serviceProvided.innerHTML = `
-              <p><span id="test-method">&check; Rapid test </span><span class="price">(Rp ${el.biayapcr})</p>
-              <p><span id="test-method">&check; PCR / Swab test </span><span class="price">(Rp ${el.biayarapid})</p>
+              <p><span id="test-method">&check; Rapid test </span><span class="price">(Rp ${el.biayarapid})</p>
+              <p><span id="test-method">&check; PCR / Swab test </span><span class="price">(Rp ${el.biayapcr})</p>
               `;
           service[i].appendChild(serviceProvided);
         } else if (el.pcr == true && el.rapid == false) {

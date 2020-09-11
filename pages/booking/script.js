@@ -13,9 +13,9 @@ function myTest() {
   let rapid = JSON.parse(localStorage.getItem('biayarapid'))
   console.log(pcr, rapid)
   const select = document.getElementById('test').value;
-  if(select === 'biayarapid' ){
+  if (select === 'biayarapid') {
     document.getElementById('fee').innerHTML = `Rp : ${rapid}`;
-  } else if(select === 'biayapcr') {
+  } else if (select === 'biayapcr') {
     document.getElementById('fee').innerHTML = `Rp : ${pcr}`;
   } else {
     Swal.fire({
@@ -23,7 +23,7 @@ function myTest() {
       title: 'Oops...',
       text: 'Anda Belum Memilih Jenis Tes',
     })
-  } 
+  }
 }
 
 
@@ -80,16 +80,16 @@ let user = JSON.parse(localStorage.getItem('user'))
 function checkout() {
   if (user !== null) {
     Swal.fire({
-      title: 'Checkout Success',
-      text: 'Terima Kasih Telah Menggunakan Jasa Kami',
-      imageUrl: 'https://unsplash.it/400/200',
-      imageWidth: 400,
-      imageHeight: 200,
-      imageAlt: 'Custom image',
+      position: 'center',
+      icon: 'success',
+      title: 'Silahkan cek email anda untuk verifikasi pembayaran',
+      showConfirmButton: false,
+      timer: 5000
     })
 
-    setTimeout(function() {
+    setTimeout(function () {
       window.location.replace("../../index.html");
-    }, 3000);
+    }, 2000);
   }
 }
+
